@@ -481,7 +481,7 @@ test('processing a stale issue will close it', async () => {
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -513,7 +513,7 @@ test('processing a stale issue containing a space in the label will close it', a
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -545,7 +545,7 @@ test('processing a stale issue containing a slash in the label will close it', a
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -578,7 +578,7 @@ test('processing a stale issue will close it when days-before-issue-stale overri
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -610,7 +610,7 @@ test('processing a stale PR will close it', async () => {
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -643,7 +643,7 @@ test('processing a stale PR will close it when days-before-pr-stale override day
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -676,7 +676,7 @@ test('processing a stale issue will close it even if configured not to mark as s
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -710,7 +710,7 @@ test('processing a stale issue will close it even if configured not to mark as s
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -743,7 +743,7 @@ test('processing a stale PR will close it even if configured not to mark as stal
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -777,7 +777,7 @@ test('processing a stale PR will close it even if configured not to mark as stal
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -1365,7 +1365,7 @@ test('stale label should not be removed if a comment was added by the bot (and t
         body: 'This issue is stale'
       }
     ], // return a fake comment to indicate there was an update by the bot
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   // process our fake issue list
@@ -1465,7 +1465,7 @@ test('stale issues should be closed if the closed nubmer of days (additive) is a
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => lastUpdate.toString()
   );
 
   // process our fake issue list
@@ -1710,7 +1710,7 @@ test('git branch is deleted when option is enabled', async () => {
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   await processor.processIssues(1);
@@ -1741,7 +1741,7 @@ test('git branch is not deleted when issue is not pull request', async () => {
     alwaysFalseStateMock,
     async p => (p === 1 ? TestIssueList : []),
     async () => [],
-    async () => new Date().toDateString()
+    async () => Date.parse('2020-01-01T17:00:00Z').toString()
   );
 
   await processor.processIssues(1);

@@ -756,7 +756,7 @@ export class IssuesProcessor {
     }
 
     const issueHasUpdateInCloseWindow: boolean = IssuesProcessor._updatedSince(
-      issue.updated_at,
+      markedStaleOn,
       daysBeforeClose
     );
     issueLogger.info(
