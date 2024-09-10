@@ -1,4 +1,6 @@
-# Changelog
+### Actions Stale Changelog
+
+### [9.0.1](https://github.com/actions/stale/compare/v9.0.0...v9.0.1) (2024-09-10)
 
 # [7.0.0]
 
